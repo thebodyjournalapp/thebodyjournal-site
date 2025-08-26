@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Body Journal – Support & Docs</title>
+<meta name="description" content="Support and documentation for the Body Journal iOS app.">
+<style>
+  :root {
+    --bg: #0b0c0f; --fg: #e9edf1; --muted:#94a3b8; --card:#12141a; --accent:#4f7cff;
+    --max: 900px; --radius: 14px;
+  }
+  @media (prefers-color-scheme: light) {
+    :root { --bg:#f8fafc; --fg:#0f172a; --muted:#475569; --card:#ffffff; --accent:#3b82f6; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, sans-serif; background:var(--bg); color:var(--fg); }
+  header { padding:48px 20px 24px; border-bottom:1px solid #00000020; }
+  .wrap { max-width:var(--max); margin:0 auto; }
+  .brand { display:flex; gap:14px; align-items:center; }
+  .brand .logo { width:44px; height:44px; border-radius:12px; background:linear-gradient(135deg,#111827, var(--accent)); box-shadow:0 6px 20px #0003; }
+  h1 { margin:0; font-size:28px; }
+  nav { margin-top:18px; display:flex; gap:12px; flex-wrap:wrap; }
+  nav a { text-decoration:none; color:var(--fg); border:1px solid #ffffff20; padding:8px 12px; border-radius:999px; background:linear-gradient(180deg, #ffffff08, #00000008); }
+  section { padding:30px 20px; }
+  .grid { display:grid; gap:16px; grid-template-columns: 1fr; }
+  @media (min-width: 800px) { .grid { grid-template-columns: 1fr 1fr; } }
+  .card { background:var(--card); border:1px solid #00000022; border-radius:var(--radius); padding:20px; }
+  h2 { margin:0 0 10px; font-size:22px; }
+  h3 { margin:16px 0 8px; font-size:18px; }
+  ul { margin:10px 0 0 20px; }
+  code, .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+  .muted { color:var(--muted); }
+  .pill { display:inline-block; padding:4px 10px; border-radius:999px; border:1px solid #fff2; background:#fff0; color:var(--muted); font-size:12px; }
+  footer { padding:32px 20px 60px; color:var(--muted); text-align:center; }
+  .kbd { padding:2px 6px; border-radius:6px; border:1px solid #fff2; }
+  a { color:var(--accent); }
+  details { border:1px solid #ffffff20; border-radius:10px; padding:12px 14px; background:#ffffff06; }
+  details + details { margin-top:10px; }
+</style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>Body Journal</h1>
+          <div class="muted">Support &amp; Documentation</div>
+        </div>
+      </div>
+      <nav aria-label="Sections">
+        <a href="#getting-started">Getting Started</a>
+        <a href="#faq">FAQ</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#changelog">Changelog</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="getting-started" class="grid">
+      <div class="card">
+        <h2>Getting Started</h2>
+        <ol>
+          <li>Open <span class="mono">Capture</span> and choose <strong>Front</strong> or <strong>Side</strong>.</li>
+          <li>Adjust the <strong>onion skin</strong> slider to align with your previous photo.</li>
+          <li>Tap the shutter. Optionally add <strong>weight</strong> and <strong>notes</strong>.</li>
+          <li>Use <span class="mono">Timeline</span> to browse, long-press to delete.</li>
+          <li>Use <span class="mono">Compare</span> for side-by-side or overlay comparisons.</li>
+        </ol>
+        <p class="muted">Tip: You can enable a 3s/5s/10s timer from the control bar.</p>
+      </div>
+      <div class="card">
+        <h2>Features</h2>
+        <ul>
+          <li>Photos stored in-app files (not Camera Roll)</li>
+          <li>Front/Side poses with optional onion-skin alignment</li>
+          <li>Add weight &amp; journal notes per entry</li>
+          <li>Timeline with long-press delete &amp; full screen viewer</li>
+          <li>Compare: side-by-side or overlay with opacity slider</li>
+          <li>Flipbook export (choose start/end range)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="card">
+        <h2>FAQ</h2>
+        <details>
+          <summary>Where are my photos stored?</summary>
+          <p>All photos are saved inside the app’s private storage on your device. They are not added to Photos unless you export them.</p>
+        </details>
+        <details>
+          <summary>Do you upload my data?</summary>
+          <p>No. Photos, weights, and notes stay on your device. If you delete the app, this local data is removed unless you’ve exported it.</p>
+        </details>
+        <details>
+          <summary>How do I delete an entry?</summary>
+          <p>On the Timeline, long-press a thumbnail and choose <em>Delete Photo</em>. This removes the photo and its associated weight/notes.</p>
+        </details>
+        <details>
+          <summary>How do I export a flipbook video?</summary>
+          <p>Open Timeline → <em>Export Flipbook</em> → select a start and end image → export.</p>
+        </details>
+      </div>
+    </section>
+
+    <section id="privacy" class="grid">
+      <div class="card">
+        <h2>Privacy Policy</h2>
+        <p>Body Journal stores photos, weights, and notes locally on your device. The app does not collect analytics, use third-party trackers, or send your content to external servers. Network access is only used for Apple services (e.g., TestFlight and the App Store). You can delete entries within the app at any time. To remove all data, delete the app from your device.</p>
+        <p class="muted pill">Last updated: <span id="pp-date">2025-08-26</span></p>
+      </div>
+      <div class="card">
+        <h2>Data Deletion</h2>
+        <p>To request assistance with data removal or for questions, contact us below. Note that deleting the app removes locally stored data.</p>
+      </div>
+    </section>
+
+    <section id="changelog">
+      <div class="card">
+        <h2>Changelog</h2>
+        <ul>
+          <li><strong>1.0</strong> – Initial TestFlight build: capture with onion skin, timeline, compare, notes, flipbook export.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="grid">
+      <div class="card">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:support@yourdomain.com">support@yourdomain.com</a></p>
+        <p>Bug report form: <a href="https://forms.gle/" target="_blank" rel="noopener">Google Form (link)</a></p>
+        <p class="muted">We typically reply within 2–3 business days.</p>
+      </div>
+      <div class="card">
+        <h2>Legal</h2>
+        <p>© <span id="year"></span> Body Journal. All rights reserved.</p>
+        <p><span class="pill">Encryption</span> Uses only Apple’s standard networking (TLS/HTTPS).</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Built with a simple static page. Host anywhere (GitHub Pages, Notion, Google Sites, Carrd).
+  </footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
